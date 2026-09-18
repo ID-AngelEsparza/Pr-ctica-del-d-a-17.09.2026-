@@ -29,6 +29,9 @@ jobs:
         with:
           tofu_version: 1.8.8
 
+      - name: Verify required secret
+        run: test -n "$TF_VAR_db_password"
+
       - name: Check formatting
         run: tofu fmt -check -recursive
 
