@@ -21,10 +21,9 @@ variable "environment" {
 }
 
 variable "db_password" {
-  description = "Contrasena sensible usada por la infraestructura simulada."
+  description = "Contrasena sensible consumida desde GitHub Actions como TF_VAR_db_password."
   type        = string
   sensitive   = true
-  default     = "Password123!"
 }
 
 resource "random_pet" "project_name" {
