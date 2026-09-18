@@ -24,7 +24,7 @@ variable "db_password" {
   description = "Contrasena sensible usada por la infraestructura simulada."
   type        = string
   sensitive   = true
-  default     = "Password123!"
+  default     = "ghp_fakeTokenForClassActivity1234567890abcdef"
 }
 
 resource "random_pet" "project_name" {
