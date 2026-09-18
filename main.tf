@@ -20,12 +20,7 @@ variable "environment" {
   default     = "dev"
 }
 
-variable "db_password" {
-  description = "Contrasena sensible usada por la infraestructura simulada."
-  type        = string
-  sensitive   = true
-  default     = "ghp_fakeTokenForClassActivity1234567890abcdef"
-}
+
 
 resource "random_pet" "project_name" {
   length    = 2
