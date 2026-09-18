@@ -31,7 +31,7 @@ git push -u origin main
 ### Rol B: auditoria y Pull Request
 
 1. Crear una rama independiente.
-2. Ejecutar analisis estatico con Checkov.
+2. Ejecutar analisis estatico con Checkov incluyendo escaneo de secretos.
 3. Capturar la vulnerabilidad en `main.tf` donde `db_password` tiene un valor por defecto en texto plano.
 4. Reemplazar `main.tf` por la version segura incluida actualmente en este repositorio, sin `default` para `db_password`.
 5. Subir la rama y abrir un Pull Request hacia `main`.
@@ -40,7 +40,7 @@ Comandos sugeridos:
 
 ```bash
 git checkout -b fix/remove-plaintext-secret
-checkov -d . --framework terraform
+checkov -d . --framework terraform,secrets
 git add main.tf
 git commit -m "fix: remove plaintext secret from variable"
 git push -u origin fix/remove-plaintext-secret
@@ -74,7 +74,7 @@ pip install checkov
 Ejecutar:
 
 ```bash
-checkov -d . --framework terraform
+checkov -d . --framework terraform,secrets
 ```
 
 ## Evidencias para entregar

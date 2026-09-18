@@ -30,7 +30,7 @@ variable "db_password" {
 }
 ```
 
-Evidencia: insertar captura de Checkov detectando la vulnerabilidad.
+Evidencia: insertar captura de Checkov detectando la vulnerabilidad con el comando `checkov -d . --framework terraform,secrets`.
 
 ## 5. Correccion aplicada
 
