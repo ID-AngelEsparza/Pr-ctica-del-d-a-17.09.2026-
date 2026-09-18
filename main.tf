@@ -20,6 +20,12 @@ variable "environment" {
   default     = "dev"
 }
 
+variable "db_password" {
+  description = "Contrasena sensible consumida desde GitHub Actions como TF_VAR_db_password."
+  type        = string
+  sensitive   = true
+}
+
 resource "random_pet" "project_name" {
   length    = 2
   separator = "-"
