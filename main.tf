@@ -20,8 +20,6 @@ variable "environment" {
   default     = "dev"
 }
 
-
-
 resource "random_pet" "project_name" {
   length    = 2
   separator = "-"
